@@ -35,7 +35,7 @@ if(isset($update))
               <div class="row" style="height:700px">
 <div class="col-md-5"> 
            
-               <h2><font color="#FFFFFF">Update Password</font></h2>
+               <h2><font color="#000">Update Password</font></h2>
 <form method="POST" enctype="multipart/form-data">
   <table border="0" cellspacing="5" cellpadding="5" class="table">
   
@@ -45,17 +45,17 @@ if(isset($update))
   <th><h3><?php echo $err; ?></h3></th>
   </tr>
   <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">Old Password</font> </th>
+    <th width="237" scope="row"><font color="#000" size="+2">Old Password</font> </th>
     <td width="213"><input type="text" name="op" class="form-control" value="<?php echo $res['password'];?>"/></td>
   </tr>
   
   <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">New Password </font></th>
+    <th width="237" scope="row"><font color="#000" size="+2">New Password </font></th>
     <td width="213"><input type="password" name="np" class="form-control" value="<?php echo $np; ?>"/></td>
   </tr>
   
   <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">Confirm Password</font> </th>
+    <th width="237" scope="row"><font color="#000" size="+2">Confirm Password</font> </th>
     <td width="213"><input type="password" name="cp" class="form-control" value="<?php echo $cp; ?>"/></td>
   </tr>
   

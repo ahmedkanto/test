@@ -1,13 +1,4 @@
-<script>
-	function deleteData(id)
-	{
-		if(confirm("You want to delete ?"))
-		{
-		window.location.href="deletesemester.php?sem_id="+id;
-		}
-	
-	}
-</script>
+
 
 <?php 
 include('../config.php');
@@ -36,10 +27,7 @@ echo "<Tr><th>Sem Id</th><th>Semester</th><th>Department</th><th>Update</th><th>
 	
 	echo "<td>".$res1['department_name']."</td>" ;
 	echo "<td><a href='admindashboard.php?info=updatesemester&sem_id=$res[sem_id]'>Update</a></td>";
-	?>
-    
-<td><a href='javascript:deleteData("<?php echo  $res[sem_id];?>")'>Delete</a></td>
-	<?php 
+	echo "<td><a href='admindashboard.php?info=deletesemester&sem_id=$res[sem_id]'>Delete</a></td>";
 	echo "</tr>";
 	}
 	

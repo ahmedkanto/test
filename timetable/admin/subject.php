@@ -50,10 +50,9 @@ echo "<Tr><th>Subject Id</th><th>Subject Name</th><th>Semester</th><th>Departmen
 	echo "<td>".$res['type']."</td>" ;
 
 	echo "<td><a href='admindashboard.php?info=updatesubject&subject_id=$res[subject_id]'>Update</a></td>";
-	?>
-    
-<td><a href='javascript:deleteData("<?php echo  $res[subject_id];?>")'>Delete</a></td>
-	<?php 
+	
+	echo "<td><a href='admindashboard.php?info=deletesubject&subject_id=$res[subject_id]'>Delete</a></td>";
+	
 	echo "</tr>";
 	}
 	

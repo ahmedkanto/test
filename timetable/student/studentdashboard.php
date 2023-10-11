@@ -19,7 +19,7 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Time table Staff Dashboard</title>
+    <title>Student Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 
-              <p> <span style="color:#FFF" >Hello <?php echo $_SESSION['name'];?>
+              <p> <span style="color:#FFF;font-size:28px" >Hello <?php echo $_SESSION['name'];?>
               </span>
 <span style="margin-left:1200px" class="glyphicon-glyphicon-off" aria-hidden="true">
 <a href="logout.php"><font color="#FFFFFF">Logout</font></a></span>
@@ -60,7 +60,7 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav" style="background-color:#000">
                  <li>
-                        <img src="<?php  echo $path;?>" width="170" height="100" alt="Profile pic not found"/>
+                       <!-- <img src="<?php  echo $path;?>" width="170" height="100" alt="Profile pic not found"/>-->
                     </li>
                     <li>
                         <a href="studentdashboard.php?info=timeschedule"><i class="fa fa-fw fa-dashboard"></i>Time Schedule</a>
@@ -86,7 +86,7 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
 
                 <!-- Page Heading -->
                 <div class="row">
-                   <div class="col-lg-12" style="background-color:#000;" height="1000px;" align="center" margin-top="20px">
+                   <div class="col-lg-12" style="background-color:#FFFFFF;" height="1000px;" align="center" margin-top="20px">
                    
                
                 
@@ -114,8 +114,8 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
 				?>
                   
                   
-                        <img src="img/5.jpg" class="img-responsive" alt="Cinque Terre" width="500" height="500" style="margin-top: 10px; margin-left: 23px;">
-                        <img src="img/4.jpg" class="img-responsive" alt="Cinque Terre" width="500" height="100" style=" margin-left: 23px;">
+                        <img src="img/5.jpg" class="img-responsive" alt="Cinque Terre" width="900" height="900" style="margin-top: 10px; margin-left: 23px;">
+                       <!-- <img src="img/4.jpg" class="img-responsive" alt="Cinque Terre" width="500" height="100" style=" margin-left: 23px;">-->
                 <?php }?>
                 
                 

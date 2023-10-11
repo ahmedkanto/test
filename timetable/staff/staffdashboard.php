@@ -18,7 +18,7 @@ if($_SESSION['teacher_id']=="" && $_SESSION['name']=="")
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Time table Staff Dashboard</title>
+    <title>Staff Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@ if($_SESSION['teacher_id']=="" && $_SESSION['name']=="")
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 
-              <p> <span style="color:#FFF" >Hello <?php echo $_SESSION['name'];?>
+              <p> <span style="color:#FFFfff; font-size:27px " >Hello <?php echo $_SESSION['name'];?>
               </span>
 <span style="margin-left:1200px" class="glyphicon-glyphicon-off" aria-hidden="true">
 <a href="logout.php"><font color="#FFFFFF">Logout</font></a></span>
@@ -105,8 +105,8 @@ if($_SESSION['teacher_id']=="" && $_SESSION['name']=="")
 				?>
                   
                   
-                        <img src="image/220x40_teacher_panel.jpg" class="img-responsive" alt="Cinque Terre" width="500" height="500" style="margin-top: 10px; margin-left: 23px;">
-                        <img src="image/aaa.jpeg" class="img-responsive" alt="Cinque Terre" width="500" height="100" style=" margin-left: 23px;">
+                        
+                        <img src="image/aaa.jpeg" class="img-responsive" alt="Cinque Terre" width="650" height="150" style=" margin-left: 23px;">
                 <?php }?>
                 
                 

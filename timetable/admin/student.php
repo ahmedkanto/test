@@ -1,18 +1,11 @@
-<script>
-	function deleteData(id)
-	{
-		if(confirm("You want to delete ?"))
-		{
-		window.location.href="deletestudent.php?stu_id="+id;
-		}
-	
-	}
-</script>
+
 
 <?php 
 include('../config.php');
 
-echo "<table border='1' class='danger'>";
+
+
+echo "<table border='1' class='table'>";
 
 echo "<tr class='danger' bgcolor='#FFCCCC'><th colspan='14'><a href='admindashboard.php?info=add_student'>Add New</a></th></tr>";
 
@@ -49,10 +42,8 @@ echo "<Tr><th>Student Id</th><th>Student Name</th><th>Email</th><th>Password</th
 	echo "<td>".$res['gender']."</td>" ;
 	echo "<td>".$res['status']."</td>" ;
 	echo "<td><a href='admindashboard.php?info=updatestudent&stu_id=$res[stu_id]'>Update</a></td>";
-	?>
-    
-<td><a href='javascript:deleteData("<?php echo  $res[stu_id];?>")'>Delete</a></td>
-	<?php 
+	echo "<td><a href='admindashboard.php?info=deletestudent&stu_id=$res[stu_id]'>Delete</a></td>";
+	
 	echo "</tr>";
 	}
 	

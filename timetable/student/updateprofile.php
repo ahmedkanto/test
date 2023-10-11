@@ -59,7 +59,7 @@ xmlhttp.send();
 
 <div class="row">
 <div class="col-sm-8" >
-<h2><font color="#FFFFFF">Update Student Profile</font></h2>
+<h2><font color="#000">Update Student Profile</font></h2>
 <form method="POST" enctype="multipart/form-data">
   <table border="0" class="table">
   <tr>
@@ -67,7 +67,7 @@ xmlhttp.send();
   </tr>
   
   <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">Department Name</font> </th>
+    <th width="237" scope="row"><font color="#000" size="+2">Department Name</font> </th>
     <td width="213">
 	
 	<select name="course" onChange="showSemester(this.value)" class="form-control">
@@ -89,7 +89,7 @@ xmlhttp.send();
 	
 	</tr>
     <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">Semester Name</font> </th>
+    <th width="237" scope="row"><font color="#000" size="+2">Semester Name</font> </th>
     <td width="213">
 	
 	<select name="semester" id="semester" class="form-control">
@@ -114,50 +114,50 @@ xmlhttp.send();
 
   
    <tr>
-    <th width="237" scope="row"><font color="#FFFFFF" size="+2">Student Name </font></th>
+    <th width="237" scope="row"><font color="#000" size="+2">Student Name </font></th>
     <td width="213"><input type="text" name="name" class="form-control" placeholder="enter your name" value="<?php echo $res['name'];?>"/></td>
   </tr>
   
-  <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Email </font></th>
+  <th scope="row"><font color="#000" size="+2">Enter Your Email </font></th>
     <td><input type="email" name="eid" class="form-control" placeholder="enter your email" value="<?php echo $res['eid'];?>" /></td>
   </tr>
   
-  <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Password </font></th>
+  <th scope="row"><font color="#000" size="+2">Enter Your Password </font></th>
     <td><input type="password" name="p" class="form-control" placeholder="enter your Password" value="<?php echo $res['password'];?>" /></td>
   </tr>
   
   <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Mobile</font> </th>
+    <th scope="row"><font color="#000" size="+2">Enter Your Mobile</font> </th>
     <td><input type="number" name="mobile" class="form-control" placeholder="enter your mobile" value="<?php echo $res['mob'];?>"/></td>
   </tr>
   
   <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Address</font></th>
+    <th scope="row"><font color="#000" size="+2">Enter Your Address</font></th>
     <td><input type="text" name="address" class="form-control" placeholder="enter your address" value="<?php echo $res['address'];?>" /></td>
   </tr>
   
   <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Enter Your D.O.B</font></th>
+    <th scope="row"><font color="#000" size="+2">Enter Your D.O.B</font></th>
     <td><input type="date" name="dob" class="form-control" placeholder="enter your D.O.B" value="<?php echo $res['dob']; ?>"/></td>
   </tr>
   
    <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Pic</font></th>
+    <th scope="row"><font color="#000" size="+2">Enter Your Pic</font></th>
     <td><input type="file" name="pic" class="form-control" placeholder="enter your Pic" value="<?php echo $res['pic']; ?>"/></td>
   </tr>
   
    <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Enter Your Gender</font></th>
-    <td><font color="#FFFFFF">male</font>
+    <th scope="row"><font color="#000" size="+2">Enter Your Gender</font></th>
+    <td><font color="#000">male</font>
      
     <input type="radio" value="m" id="gen" name="gen" <?php if($res['gender']=="m"){echo "checked";} ?>/>
-	<font color="#FFFFFF">female</font>
+	<font color="#000">female</font>
     <input type="radio"value="f" id="gen" name="gen" <?php if($res['gender']=="f"){echo "checked";} ?>/></td>
   </tr>
   
   
   <tr>
-    <th scope="row"><font color="#FFFFFF" size="+2">Status</font></th>
+    <th scope="row"><font color="#000" size="+2">Status</font></th>
     <td><input type="text" name="status" class="form-control" placeholder="enter your Status" value="<?php echo $res['status'];?>"/></td>
   </tr>
   

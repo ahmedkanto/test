@@ -20,7 +20,7 @@ $_SESSION=$res;
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Time table Admin Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@ $_SESSION=$res;
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 
-              <p> <span style="color:#FFF" >Hello Admin</span>
+              <p> <span style="color:#FFF" >Welcome Admin</span>
 <span style="margin-left:1200px" class="glyphicon-glyphicon-off" aria-hidden="true">
 <a href="logout.php"><font color="#FFFFFF">Logout</font></a></span>
 </p>
@@ -57,23 +57,23 @@ $_SESSION=$res;
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav" style="background-color:#000">
                     <li>
-                        <a href="admindashboard.php?info=course"><i class="fa fa-fw fa-dashboard"></i>Department</a>
+                        <!--<a href="admindashboard.php?info=course"><i class="fa fa-fw fa-dashboard"></i>Department</a>-->
                     </li>
                     <li>
-                        <a href="admindashboard.php?info=semester"><i class="fa fa-fw fa-bar-chart-o"></i>Semester</a>
+                        <a href="admindashboard.php?info=semester"><i class="fa fa-fw fa-bar-chart-o"></i>Semesters</a>
                     </li>
                     <li>
-                        <a href="admindashboard.php?info=subject"><i class="fa fa-fw fa-table"></i>Subject</a>
+                        <a href="admindashboard.php?info=subject"><i class="fa fa-fw fa-table"></i>Subjects</a>
                     </li>
                     <li>
-                        <a href="admindashboard.php?info=student"><i class="fa fa-fw fa-edit"></i>Student</a>
+                        <a href="admindashboard.php?info=student"><i class="fa fa-fw fa-edit"></i>Students</a>
                     </li>
                     <li>
-                        <a href="admindashboard.php?info=teacher"><i class="fa fa-fw fa-desktop"></i>Teacher</a>
+                        <a href="admindashboard.php?info=teacher"><i class="fa fa-fw fa-desktop"></i>Lecturers</a>
                     </li>
                     
                     <li>
-                        <a href="admindashboard.php?info=add_timetable"><i class="fa fa-fw fa-wrench"></i>Time Table</a>
+                        <a href="admindashboard.php?info=add_timetable"><i class="fa fa-fw fa-wrench"></i>Timetable</a>
                     </li>
                     
                 </ul>
@@ -182,13 +182,31 @@ $_SESSION=$res;
 					include('update_timetable.php');
 				     }
 					 
-					}
+				elseif($info=="deleteteacher")
+				{
+					include('deleteteacher.php');
+				     }
+				
+				elseif($info=="deletestudent")
+				{
+					include('deletestudent.php');
+				     }
+				elseif($info=="deletesemester")
+				{
+					include('deletesemester.php');
+				     }
+					 
+				elseif($info=="deletesubject")
+				{
+					include('deletesubject.php');
+				     } 
+				}
 				else
 				{
 				?>
                   
-                   <font color="#FF3333" size="+3" face="Lucida Console, Monaco, monospace">Admin Panel</font><br/>
-                        <img src="img/online-practice-exams.jpg" class="img-responsive" alt="Cinque Terre" width="500" height="500" style="                          margin-top: 70px; margin-left: 23px;">
+                   <font color="#000000" size="+6" face="">Control Panel</font><br/>
+                        <img src="img/online-practice-exams.jpg" class="img-responsive" alt="Cinque Terre" width="600" height="600" style="                          margin-top: 70px; margin-left: 23px;">
                 <?php }?>
                 
                 

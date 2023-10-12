@@ -71,7 +71,9 @@ $_SESSION=$res;
                     <li>
                         <a href="admindashboard.php?info=teacher"><i class="fa fa-fw fa-desktop"></i>Lecturers</a>
                     </li>
-                    
+                    <li>
+                        <a href="admindashboard.php?info=room"><i class="fa fa-fw fa-desktop"></i>Rooms</a>
+                    </li>
                     <li>
                         <a href="admindashboard.php?info=add_timetable"><i class="fa fa-fw fa-wrench"></i>Timetable</a>
                     </li>
@@ -116,6 +118,10 @@ $_SESSION=$res;
 				{
 					include('teacher.php');
 					}
+				elseif($info=="room")
+				{
+					include('room.php');
+					}
 				elseif($info=="timetable")
 				{
 					include('timetable.php');
@@ -145,7 +151,10 @@ $_SESSION=$res;
 				{
 					include('add_student.php');
 					}
-					
+				elseif($info=="add_room")
+				{
+					include('add_room.php');
+					}	
 					
 				elseif($info=="add_timetable")
 				{
@@ -176,6 +185,10 @@ $_SESSION=$res;
 				{
 					include('updateteacher.php');
 				     }
+				elseif($info=="updateroom")
+				{
+					include('updateroom.php');
+					}	
 
                 elseif($info=="updatetimetable")
 				{
@@ -200,6 +213,10 @@ $_SESSION=$res;
 				{
 					include('deletesubject.php');
 				     } 
+				elseif($info=="deleteroom")
+				{
+					include('deleteroom.php');
+					}	
 				}
 				else
 				{

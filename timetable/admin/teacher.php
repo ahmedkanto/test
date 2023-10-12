@@ -38,8 +38,8 @@ echo "<Tr><th>Lecturer Id</th><th>Lecturer Name</th><th>Email</th><th>Password</
 	//echo "<td>".$res2['department_name']."</td>" ;
 	
 	//display semester name
-	$que1=mysqli_query($con,"select *  from semester where sem_id='".$res['sem_id']."'");
-	$res1=mysqli_fetch_array($que1);
+	//$que1=mysqli_query($con,"select *  from semester where sem_id='".$res['sem_id']."'");
+	//$res1=mysqli_fetch_array($que1);
 	
 	// echo "<td>".$res1['semester_name']."</td>" ;
 	

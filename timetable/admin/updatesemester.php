@@ -2,7 +2,7 @@
 include('../config.php');
 $sem_id=$_REQUEST['sem_id'];
 
-$q=mysqli_query("select * from semester where sem_id='$sem_id'");
+$q=mysqli_query($con,"select * from semester where sem_id='$sem_id'");
 $res=mysqli_fetch_assoc($q);
 extract($_POST);
 if(isset($update))

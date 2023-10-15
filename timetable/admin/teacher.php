@@ -1,13 +1,3 @@
-<script>
-	function deleteData(id)
-	{
-		if(confirm("You want to delete ?"))
-		{
-		window.location.href="deleteteacher.php?teacher_id="+id;
-		}
-	
-	}
-</script>
 
 <?php 
 include('../config.php');
@@ -56,3 +46,4 @@ echo "<Tr><th>Lecturer Id</th><th>Lecturer Name</th><th>Email</th><th>Password</
 echo "</table>";	
 
 ?>
+

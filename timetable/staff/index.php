@@ -35,8 +35,8 @@ if(isset($save))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,7 +75,7 @@ if(isset($save))
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
-    <![endif]-->
+
 
 </head>
     <body>

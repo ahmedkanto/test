@@ -11,7 +11,7 @@ $row=mysqli_num_rows($que);
 	}
 	else
 	{
-mysqli_query($con,"insert into room values(null,'$s')");	
+mysqli_query($con,"insert into room values(null,'$s', '$type')");	
 
 	$err="<font color='blue'>Congrates Your Data Saved!!!</font>";
 	}
@@ -33,7 +33,14 @@ mysqli_query($con,"insert into room values(null,'$s')");
     <th width="237" scope="row">Room Name </th>
     <td width="213"><input type="text" name="s" class="form-control"/></td>
   </tr>
-  
+    <tr>
+    <th width="237" scope="row">Type </th>
+    <td width="213"><input class="form-check-input" type="radio" name="type" value="Theory" checked>
+  		<label class="form-check-label" for="Theory">Theory</label>
+		<input class="form-check-input" type="radio" name="type" value="Lab">
+  		<label class="form-check-label" for="Lab">Lab</label>	  
+	</td>
+  </tr>
  <tr>
     <td colspan="2" align="center">
 	<input type="submit" value="Add Room" name="save" class="btn btn-success" />

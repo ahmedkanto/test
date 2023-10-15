@@ -66,8 +66,8 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           
-          <li><a href="../timetable/staff/index.php">Staff Login</a></li>
-          <li><a href="../timetable/student/index.php">Student Login</a></li> 
+          <li><a href="../staff/index.php">Staff Login</a></li>
+          <li><a href="../student/index.php">Student Login</a></li> 
         </ul>
       </li> 
     </ul>

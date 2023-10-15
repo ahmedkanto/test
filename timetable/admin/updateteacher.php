@@ -7,7 +7,7 @@ extract($_POST);
 if(isset($update))
 {	
 
-	mysqli_query($con,"update teacher set name='$n',eid='$e',password='$p',mob='$m',address='$a',department_id='$dep_id' where teacher_id='$teacher_id' ");
+	mysqli_query($con,"update teacher set name='$n',eid='$e',password='$p',mob='$m',address='$a' where teacher_id='$teacher_id' ");
 	
 	$err= "Records updated";
 	
@@ -23,26 +23,8 @@ if(isset($update))
   <tr>
   <td colspan="2"><?php echo @$err; ?></td>
   </tr>
-  
-   <tr>
-   <th width="237" scope="row">Select Department</th>
-    <td width="213">
-	<select name="dep_id" id="courseid" onchange="showSemester(this.value)" class="form-control">
-	<?php
-	$sub=mysqli_query($con,"select * from department");
-	while($s=mysqli_fetch_array($sub))
-	{
-		$s_id=$s[0];
-		?>
-		<option value='<?php echo $s_id; ?>' <?php if($s_id==$res['department_id']){echo "selected";} ?>><?php echo $s[1];?></option>
-<?php 	}
-	
-	?>
-    </select>
-   
-  </tr>
-  
-  </tr>
+
+
     <!-- <tr>
     <th width="237" scope="row">Semester Name </th>
     <td width="213">

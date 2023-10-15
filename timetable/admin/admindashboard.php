@@ -14,7 +14,7 @@ $_SESSION=$res;
 
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -29,8 +29,8 @@ $_SESSION=$res;
     <link href="css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
    
 
 </head>
@@ -59,9 +59,7 @@ $_SESSION=$res;
                     <li>
                         <!--<a href="admindashboard.php?info=course"><i class="fa fa-fw fa-dashboard"></i>Department</a>-->
                     </li>
-                    <li>
-                        <a href="admindashboard.php?info=semester"><i class="fa fa-fw fa-bar-chart-o"></i>Semesters</a>
-                    </li>
+
                     <li>
                         <a href="admindashboard.php?info=subject"><i class="fa fa-fw fa-table"></i>Subjects</a>
                     </li>

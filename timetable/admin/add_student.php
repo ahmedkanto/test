@@ -17,7 +17,7 @@ $row=mysqli_num_rows($que);
 	{
 	$image=$_FILES['pic']['name'];	
 		
-       mysqli_query($con,"insert into student values(null,'$stname','$eid','$p','$mobile','$address','$courseid','$s','$dob','$image','$gen','$status',now())");	
+       mysqli_query($con,"insert into student values(null,'$stname','$eid','$p','$mobile','$address','$dob','$image','$gen','$status',now())");	
 
     mkdir("../student/image/$eid");
      move_uploaded_file($_FILES['pic']['tmp_name'],"../student/image/$eid/".$_FILES['pic']['name']);
@@ -109,44 +109,7 @@ xmlhttp.send();
   <tr>
   <td colspan="2"><?php echo @$err; ?></td>
   </tr>
-	<tr>
-    <th width="237" scope="row">Select Department</th>
-    <td width="213">
-	<select name="courseid" class="form-control" onchange="showSemester(this.value)" id="courseid">
-    <option disabled selected >Select Department</option>
-	<?php 
-	$dep=mysqli_query($con,"select * from department");
-	while($dp=mysqli_fetch_array($dep))
-	{
-	$dp_id=$dp[0];
-	echo "<option value='$dp_id'>".$dp[1]."</option>";
-	}
-	?>
-	
-    </select>
-	</td>
-  </tr>
-   
-    <tr>
-    <th width="237" scope="row">Select Semester</th>
-    <td width="213">
-	<select name="s" id="semester" onchange="showsemester(this.value)" class="form-control"/>
-    <option disabled selected >Select Semester</option>
-    
-    <?php
-	$sub=mysqli_query($con,"select * from semester");
-	while($s=mysqli_fetch_array($sub))
-	{
-		$s_id=$s[0];
-		echo "<option value='$s_id'>".$s[1]."</option>";
-	}
-	
-	?>
-	
-	</select>
-	
-	</td>
-  </tr>
+
    
   <tr>
     <th width="237" scope="row">Student Name </th>
@@ -173,7 +136,7 @@ xmlhttp.send();
   </tr>
   
    <tr>
-    <th scope="row">Enter Your D.O.B</th>
+    <th scope="row">Enter Your Date of Birth</th>
     <td><input type="date" name="dob" class="form-control" placeholder="enter your D.O.B"/></td>
   </tr>
   

@@ -11,7 +11,7 @@ if(isset($update))
 $oldimg=$_GET['img'];
 unlink("image/$email/$oldimg");
     $image=$_FILES['pic']['name'];	
-	mysqli_query($con,"update student set name='$name',eid='$eid',password='$p',mob='$mobile',address='$address',department_id='$course',sem_id='$semester',
+	mysqli_query($con,"update student set name='$name',eid='$eid',password='$p',mob='$mobile',address='$address',
 dob='$dob',pic='$image',gender='$gen',status='$status' where  stu_id='".$_SESSION['stu_id']."'");
 
  mkdir("../student/image/$eid");
@@ -66,51 +66,6 @@ xmlhttp.send();
   <td colspan="2"><?php echo @$err; ?></td>
   </tr>
   
-  <tr>
-    <th width="237" scope="row"><font color="#000" size="+2">Department Name</font> </th>
-    <td width="213">
-	
-	<select name="course" onChange="showSemester(this.value)" class="form-control">
-	<?php 
-	$cou=mysqli_query($con,"select * from department");
-	while($c=mysqli_fetch_array($cou))
-	{
-	$c_id=$c[0];
-	?>
-	<option value='<?php echo $c_id; ?>' <?php if($c_id==$res['department_id']){echo "selected";} ?>>
-	<?php echo $c[1]; ?>
-	</option>
-	<?php
-	}
-	?>
-	
-    </select>
-	</td>
-	
-	</tr>
-    <tr>
-    <th width="237" scope="row"><font color="#000" size="+2">Semester Name</font> </th>
-    <td width="213">
-	
-	<select name="semester" id="semester" class="form-control">
-	<?php	
-	$sem=mysqli_query($con,"select * from semester where department_id='".$res['department_id']."'");
-	while($s=mysqli_fetch_array($sem))
-	{
-	$s_id=$s[0];
-	?>
-	<option value='<?php echo $s_id; ?>' <?php if($s_id==$res['sem_id']){echo "selected";} ?>>
-	<?php echo $s[1]; ?>
-	</option>
-	<?php
-	}
-	?>
-	
-	
-    </select>
-	</td>
-	
-	</tr>
 
   
    <tr>
@@ -137,7 +92,7 @@ xmlhttp.send();
   </tr>
   
   <tr>
-    <th scope="row"><font color="#000" size="+2">Enter Your D.O.B</font></th>
+    <th scope="row"><font color="#000" size="+2">Enter Your Date of Birth</font></th>
     <td><input type="date" name="dob" class="form-control" placeholder="enter your D.O.B" value="<?php echo $res['dob']; ?>"/></td>
   </tr>
   

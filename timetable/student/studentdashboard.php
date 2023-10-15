@@ -28,7 +28,7 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
     <link href="css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
    
 
@@ -43,11 +43,11 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 
-              <p> <span style="color:#FFF;font-size:28px" >Hello <?php echo $_SESSION['name'];?>
+              <p> <span style="color:#FFFFFF;font-size:22px" >Hello <?php echo $_SESSION['name'];?>
               </span>
-<span style="margin-left:1200px" class="glyphicon-glyphicon-off" aria-hidden="true">
-<a href="logout.php"><font color="#FFFFFF">Logout</font></a></span>
-</p>
+			<span style="margin-left:1200px" class="glyphicon-glyphicon-off" aria-hidden="true">
+			<a href="logout.php"><font color="#FFFFFF">Logout</font></a></span>
+			</p>
             </div>
             
             <!-- Top Menu Items -->
@@ -66,7 +66,10 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
                         <a href="studentdashboard.php?info=timeschedule"><i class="fa fa-fw fa-dashboard"></i>Time Schedule</a>
                     </li>
                     <li>
-                        <a href="studentdashboard.php?info=updateprofile&img=<?php echo $img;?>"><i class="fa fa-fw fa-bar-chart-o"></i>Update Profile</a>
+                        <a href="studentdashboard.php?info=updateprofile&img=image/"><i class="fa fa-fw fa-bar-chart-o"></i>Update Profile</a>
+                    </li>
+					<li>
+                        <a href="studentdashboard.php?info=subjects"><i class="fa fa-fw fa-dashboard"></i>Subjects</a>
                     </li>
                     <li>
                         <a href="studentdashboard.php?info=updatepassword"><i class="fa fa-fw fa-table"></i>Update Password</a>
@@ -102,7 +105,18 @@ if($_SESSION['stu_id']=="" && $_SESSION['name']=="")
 				{
 					include('updateprofile.php');
 					}
-					
+				elseif($info=="addsubjects")
+				{
+					include('addsubjects.php');
+					}
+				elseif($info=="subjects")
+				{
+					include('subject.php');
+					}
+				elseif($info=="deletesubject")
+				{
+					include('deletesubject.php');
+					}
 				elseif($info=="timeschedule")
 				{
 					include('timeschedule.php');

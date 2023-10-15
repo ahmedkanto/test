@@ -27,7 +27,7 @@ if($_SESSION['teacher_id']=="" && $_SESSION['name']=="")
     <link href="css/sb-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
    
 

@@ -11,7 +11,7 @@ $row=mysqli_num_rows($que);
 	}
 	else
 	{
-mysqli_query($con,"insert into teacher values(null,'$n','$e','$p', $m,'$a','$courseid')");	
+mysqli_query($con,"insert into teacher values(null,'$n','$e','$p', $m,'$a')");	
 
 	$err="<font color='blue'>Congrates Your Data Saved!!!</font>";
 	}
@@ -95,23 +95,7 @@ xmlhttp.send();
   <tr>
   <td colspan="2"><?php echo @$err; ?></td>
   </tr>
-   
-   <tr>
-    <th width="237" scope="row">Select Department</th>
-    <td width="213">
-	<select name="courseid" id="courseid" onchange="showSemester(this.value)" class="form-control">
-    <option disabled selected >Select Department</option>
-	<?php
-	$t=mysqli_query($con,"select * from department");
-	while($s=mysqli_fetch_array($t))
-	{
-		$t_id=$s[0];
-		echo "<option value='$t_id'>".$s[1]."</option>";
-	}
-	
-	?>
-	</td>
-  </tr>
+ 
    
   <!-- <tr>
     <th width="237" scope="row">Select Semester</th>
